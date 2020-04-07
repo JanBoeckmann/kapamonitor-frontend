@@ -17,6 +17,8 @@ import Leaflet from './containers/Leaflet/Leaflet';
 import Setting from './containers/Setting';
 import Register from './containers/Register/Register';
 import UserNotice from './components/UserNotice/UserNotice';
+import DashboardRequirements from './containers/DashboardRequirements';
+import createLocation from './containers/createLocation/createLocation';
 
 firebase.initializeApp(config.firebaseConfig);
 
@@ -79,6 +81,8 @@ function App(props) {
                             <DashboardRoute path="/map" component={Leaflet}/>
                             <DashboardRoute path="/register" component={Register}/>
                             <DashboardRoute path="/setting" component={Setting}/>
+                            <DashboardRoute path="/createLocation" component={createLocation}/>
+                            <DashboardRoute path="/dashboardRequirements" component={DashboardRequirements}/>
                             <DashboardRoute exact path="/" component={Dashboard}/>
                             <EmptyRoute component={NotFound}/>
                         </Switch>

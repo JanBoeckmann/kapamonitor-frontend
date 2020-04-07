@@ -5,6 +5,8 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 import MapIcon from '@material-ui/icons/Map';
 import CreateIcon from '@material-ui/icons/Create';
 import LoginIcon from '@material-ui/icons/LockOpen';
+import CreateLocationIcon from '@material-ui/icons/AccountBalance';
+import DashboardRequirementsIcon from '@material-ui/icons/Announcement';
 import { makeStyles } from '@material-ui/core/styles';
 import { setNavigation } from '../../store/register/actions';
 import { connect } from 'react-redux';
@@ -69,6 +71,12 @@ const BottomNavigationBar = props => {
             {/*<BottomNavigationAction label="Signin" value="signin-oidc" icon={<LoginIcon/>}/>*/}
             {/*</Link>*/}
             {/*<Link to={"setting"}><BottomNavigationAction label="Profile" value="profile" icon={<SettingsIcon/>}/></Link>*/}
+            <BottomNavigationAction label="Standort hinzufügen" value="createLocation" icon={<CreateLocationIcon/>}/>
+            {/*</Link>*/}
+            {/*<Link to={"createLocation"}><BottomNavigationAction label="Profile" value="profile" icon={<CreateLocationIcon/>}/></Link>*/}
+            <BottomNavigationAction label="Dashboard Bedarf" value="dashboardRequirements" icon={<DashboardRequirementsIcon/>}/>
+            {/*</Link>*/}
+            {/*<Link to={"createLocation"}><BottomNavigationAction label="Profile" value="profile" icon={<CreateLocationIcon/>}/></Link>*/}
 
         </BottomNavigation>
     );
