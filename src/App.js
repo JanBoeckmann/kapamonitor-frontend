@@ -14,6 +14,14 @@ import SignUpPage from './containers/SignUpPage';
 
 import Dashboard from './containers/Dashboard';
 import Leaflet from './containers/Leaflet/Leaflet';
+import OffersOverview from './containers/offersOverview/offersOverview';
+import RequirementsOverview from './containers/requirementsOverview/requirementsOverview';
+import AccountInformation from './containers/accountInformation/accountInformation';
+import AdminPanel from './containers/adminPanel/adminPanel';
+import OfferProcessing from './containers/offerProcessing/offerProcessing';
+import RequirementProcessing from './containers/requirementProcessing/requirementProcessing';
+import YourOffers from './containers/yourOffers/yourOffers';
+import YourRequirements from './containers/yourRequirements/yourRequirements';
 import Setting from './containers/Setting';
 import Register from './containers/Register/Register';
 import UserNotice from './components/UserNotice/UserNotice';
@@ -75,10 +83,15 @@ function App(props) {
                 <div style={{ height: '100vh' }}>
                     <Router>
                         <Switch>
-                            <DashboardRoute path="/dashboard" component={Dashboard}/>
-                            <DashboardRoute path="/map" component={Leaflet}/>
                             <DashboardRoute path="/register" component={Register}/>
-                            <DashboardRoute path="/setting" component={Setting}/>
+                            <DashboardRoute path="/offersOverview" component={OffersOverview}/>
+                            <DashboardRoute path="/requirementsOverview" component={RequirementsOverview}/>
+                            <DashboardRoute path="/accountInformation" component={AccountInformation}/>
+                            <DashboardRoute path="/adminPanel" component={AdminPanel}/>
+                            <DashboardRoute path="/offerProcessing" component={OfferProcessing}/>
+                            <DashboardRoute path="/requirementProcessing" component={RequirementProcessing}/>
+                            <DashboardRoute path="/yourOffers" component={YourOffers}/>
+                            <DashboardRoute path="/yourRequirements" component={YourRequirements}/>
                             <DashboardRoute exact path="/" component={Dashboard}/>
                             <EmptyRoute component={NotFound}/>
                         </Switch>
