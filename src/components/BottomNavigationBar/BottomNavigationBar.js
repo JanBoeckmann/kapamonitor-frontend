@@ -59,16 +59,24 @@ const BottomNavigationBar = props => {
     return (
         <BottomNavigation value={props.nav} onChange={handleChange} className={classes.root}>
             {/*<Link to="/dashboard" onClick={()=>handleChange("dashboard")}>*/}
-            <BottomNavigationAction label="Übersicht" value="dashboard" icon={<DashboardIcon/>}/>
+            {/*<BottomNavigationAction label="Übersicht" value="dashboard" icon={<DashboardIcon/>}/>*/}
             {/*</Link>*/}
             {/*<Link to="/map" onClick={()=>handleChange("map")}>*/}
-            <BottomNavigationAction label="Karte" value="map" icon={<MapIcon/>}/>
+            {/*<BottomNavigationAction label="Karte" value="map" icon={<MapIcon/>}/>*/}
             {/*</Link>*/}
             {/*<Link to="/register" onClick={()=>handleChange("register")}>*/}
-            // <BottomNavigationAction label="Hinzufügen" value="register" icon={<CreateIcon/>}/>
+            {/* <BottomNavigationAction label="Hinzufügen" value="register" icon={<CreateIcon/>}/>*/}
             {/*<BottomNavigationAction label="Signin" value="signin-oidc" icon={<LoginIcon/>}/>*/}
             {/*</Link>*/}
             {/*<Link to={"setting"}><BottomNavigationAction label="Profile" value="profile" icon={<SettingsIcon/>}/></Link>*/}
+            <BottomNavigationAction label="Übersicht Angebote" value="offersOverview" icon={<DashboardIcon/>}/>
+            <BottomNavigationAction label="Übersicht Bedarfe" value="requirementsOverview" icon={<DashboardIcon/>}/>
+            <BottomNavigationAction label="Account Info" value="accountInformation" icon={<LoginIcon/>}/>
+            <BottomNavigationAction label="Admin Panel" value="adminPanel" icon={<LoginIcon/>}/>
+            <BottomNavigationAction label="Angebot Bearbeiten" value="offerProcessing" icon={<CreateIcon/>}/>
+            <BottomNavigationAction label="Bedarf Bearbeiten" value="requirementProcessing" icon={<CreateIcon/>}/>
+            <BottomNavigationAction label="Deine Angebote" value="yourOffers" icon={<MapIcon/>}/>
+            <BottomNavigationAction label="Deine Bedarfe" value="yourRequirements" icon={<MapIcon/>}/>
 
         </BottomNavigation>
     );
